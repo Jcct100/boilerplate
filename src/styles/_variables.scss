@@ -1,0 +1,38 @@
+// Colours
+$theme-colors: (
+  "black": #363636,
+  "white": #f6f1de,
+  "grey": #daddd0,
+  "yellow": #ffcd38,
+  "red": #fc2f2f
+);
+
+@function color($key) {
+  @return map-get($theme-colors, $key);
+}
+
+$brand-primary: color("black");
+$brand-secondary: color("yellow");
+
+// Temporary Breakpoints
+$large: 992px;
+$xl: 1200px;
+$xxl: 2000px;
+
+@mixin large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{$xl}) {
+    @content;
+  }
+}
